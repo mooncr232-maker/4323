@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ადმინი — Tom &amp; Jerry ვიდეოები</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="brand">
+      <img src="/assets/logo.png" alt="Tom and Jerry">
+      ადმინ პანელი
+    </div>
+    <div>
+      <a href="/" class="btn btn-outline">← საიტზე დაბრუნება</a>
+      <button id="logoutBtn" class="btn btn-danger" style="display:none;">გამოსვლა</button>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- LOGIN -->
+    <div id="loginBox" class="admin-panel">
+      <h2>ავტორიზაცია</h2>
+      <div class="field">
+        <label>პაროლი</label>
+        <input type="password" id="passwordInput" placeholder="შეიყვანე პაროლი">
+      </div>
+      <button class="btn btn-primary" id="loginBtn">შესვლა</button>
+      <div id="loginMsg" class="msg"></div>
+    </div>
+
+    <!-- ADMIN CONTENT -->
+    <div id="adminContent" style="display:none;">
+
+      <div class="admin-panel" style="margin-bottom: 28px;">
+        <h2>ვიდეოს ატვირთვა</h2>
+        <div class="field">
+          <label>ვიდეოს სახელი</label>
+          <input type="text" id="uploadTitle" placeholder="მაგ: ტომი და ჯერი — ეპიზოდი 1">
+        </div>
+        <div class="field">
+          <label>ვიდეო ფაილი (MP4, მაქს. 1GB)</label>
+          <input type="file" id="uploadFile" accept="video/mp4">
+        </div>
+        <button class="btn btn-primary" id="uploadBtn">ატვირთვა</button>
+        <div class="progress-bar" id="progressBar"><div class="fill" id="progressFill"></div></div>
+        <div id="uploadMsg" class="msg"></div>
+      </div>
+
+      <div class="admin-panel">
+        <h2>ატვირთული ვიდეოები</h2>
+        <div id="adminList"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="small-note">Tom &amp; Jerry Videos — ადმინ პანელი</footer>
+
+  <script src="/js/admin.js"></script>
+</body>
+</html>
